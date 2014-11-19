@@ -12,13 +12,14 @@ class d3.chart.MyChart extends d3.chart.BaseChart
     constructor: ->
         @accessors = {} unless @accessors?
         @accessors.x_value = "ciap"
+        super
 
     _draw: (element, data, i) ->
         ...draw here
 
 base = new d3.chart.BaseChart
 console.log base.accessors
-my = new MyChart
+my = new d3.chart.MyChart
 console.log my.accessors
 console.log my.x_value()
 
