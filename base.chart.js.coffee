@@ -1,5 +1,4 @@
-d3 = {} unless d3?
-d3.chart = {} unless d3.chart?
+d3.chart ?= {}
 
 class d3.chart.BaseChart
 
@@ -26,7 +25,8 @@ class d3.chart.BaseChart
                     return this
 
     draw: (selection) =>
-        selection.each (d, i) -> this._draw(this, d, i)
+        me = @
+        selection.each (d, i) -> me._draw(this, d, i)
 
     _draw: (element, data, i) ->
         throw "_draw not implemented!"
