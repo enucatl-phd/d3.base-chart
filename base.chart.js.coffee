@@ -30,4 +30,3 @@ class d3.chart.BaseChart
 
     _draw: (element, data, i) ->
         throw "_draw not implemented!"
-
