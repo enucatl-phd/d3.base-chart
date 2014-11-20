@@ -11,6 +11,8 @@ class d3.chart.BaseChart
             right: 0
             bottom: 0
             left: 0
+        @accessors.x_scale = d3.scale.linear()
+        @accessors.y_scale = d3.scale.linear()
         @buildAccessors()
 
 
