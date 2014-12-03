@@ -5,6 +5,10 @@ base class for a reusable d3.js component written in coffeescript
 Inspired by [dandavison](https://gist.github.com/dandavison/4152640) and
 [wprater](https://gist.github.com/wprater/5682740).
 
+You should inherit from this class, append any parameters to the constructor
+`@accessors` that will be useful for the chart, and write a `_draw(element,
+data, i)` function that will do the actual drawing.
+
 Example
 -------
 ```coffeescript
@@ -34,7 +38,7 @@ d3.select "body"
     .call my.draw
 ```
 
-Everything you add to the `@accessors` in the contructor will be
+Everything you add to the `@accessors` in the constructor will be
 available with a getter/setter method.
 
 Depends on
